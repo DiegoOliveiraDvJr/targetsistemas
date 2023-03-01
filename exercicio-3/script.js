@@ -19,8 +19,8 @@ const getBillingSummary = (data) => {
 
 const updateResults = (results) => {
   const { minBilling, maxBilling, daysAboveAverage } = results;
-  document.getElementById('min-billing-daily').innerText = `R$ ${minBilling.toFixed(4)}`;
-  document.getElementById('max-billing-daily').innerText = `R$ ${maxBilling.toFixed(4)}`;
+  document.getElementById('min-billing-daily').innerText = `R$ ${minBilling.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
+  document.getElementById('max-billing-daily').innerText = `R$ ${maxBilling.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
   document.getElementById('count-daily-average').innerText = daysAboveAverage;
 };
 
